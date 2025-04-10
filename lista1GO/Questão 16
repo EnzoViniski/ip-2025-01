@@ -1,0 +1,15 @@
+SalárioReajuste
+
+package main
+import "fmt"
+func main() {
+var n1, multi float64
+fmt.Print("Digite seu salário: ")
+fmt.Scan(&n1)
+if n1 <= 300 {
+multi = n1 * 1.5
+} else {
+multi = n1 * 1.3
+}
+fmt.Printf("SALARIO COM REAJUSTE = %.2f\n", multi)
+}
