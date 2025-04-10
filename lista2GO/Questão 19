@@ -1,0 +1,43 @@
+package main
+
+import (
+    "fmt"
+    "math"
+)
+
+func main() {
+    var tipo int
+    var alt, raio float64
+    
+    fmt.Println("Digite o tipo de figura que deseja calcular:")
+    fmt.Println("1- Cone")
+    fmt.Println("2- Cilindro")
+    fmt.Println("3- Esfera")
+    fmt.Scan(&tipo)
+    
+    fmt.Println("Digite o valor da altura:")
+    fmt.Scan(&alt)
+    
+    fmt.Println("Digite o valor do raio:")
+    fmt.Scan(&raio)
+    
+    switch tipo {
+    case 1:
+        area := math.Pi * float64(raio) * (float64(raio) + math.Sqrt(float64(alt*alt)+float64(raio*raio)))
+        volume := (math.Pi * float64(raio*raio) * float64(alt)) / 3
+        fmt.Println("O volume do cone é:", volume)
+        fmt.Println("A area do cone é:", area)
+    case 2:
+        area := 2 * math.Pi * float64(raio) * (float64(raio) + float64(alt))
+        volume := math.Pi * float64(raio*raio) * float64(alt)
+        fmt.Println("O volume do cilindro é:", volume)
+        fmt.Println("A area do cilindro é:", area)
+    case 3:
+        area := 4 * math.Pi * float64(raio*raio)
+        volume := (4 * math.Pi * float64(raio*raio*raio)) / 3
+        fmt.Println("O volume da esfera é:", volume)
+        fmt.Println("A area da esfera é:", area)
+    default:
+        fmt.Println("Numero invalido. Escolha um entre 1 e 3")
+    }
+}
