@@ -1,0 +1,43 @@
+ ContaMetrosCúbicos
+
+package main
+import "fmt"
+func main() {
+var tipo_consumidor string
+var conta int
+var consumo, soma float64
+fmt.Print("Digite sua conta: ")
+fmt.Scan(&conta)
+fmt.Print("Digite seu tipo de consumidor (C, I ou R):")
+fmt.Scan(&tipo_consumidor)
+switch tipo_consumidor {
+case "C":
+fmt.Print("Digite seu consumo: ")
+fmt.Scan(&consumo)
+if consumo > 80 {
+soma = 500 + (0.25 * (consumo - 80))
+} else {
+soma = 500
+}
+fmt.Printf("Conta: %d\n", conta)
+fmt.Printf("Valor conta: %.2f\n", soma)
+case "I":
+fmt.Print("Digite seu consumo: ")
+fmt.Scan(&consumo)
+if consumo > 100 {
+soma = 800 + (0.04 * (consumo - 100))
+} else {
+soma = 800
+}
+fmt.Printf("Conta: %d\n", conta)
+fmt.Printf("Valor conta: %.2f\n", soma)
+case "R":
+fmt.Print("Digite seu consumo: ")
+fmt.Scan(&consumo)
+soma = 5 + 0.05 * consumo
+fmt.Printf("Conta: %d\n", conta)
+fmt.Printf("Valor conta: %.2f\n", soma)
+default:
+fmt.Println("Escolha apenas entre C, I ou R!")
+}
+}
