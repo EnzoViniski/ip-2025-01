@@ -1,0 +1,17 @@
+Soma
+
+package main
+import "fmt"
+func main() {
+var n1, soma float64
+fmt.Print("Digite o valor de n (deve ser maior que 1 e inteiro): ")
+fmt.Scan(&n1)
+if n1 < 1 {
+fmt.Println("NUMERO INVALIDO, DIGITE UM NUMERO INTEIRO MAIOR QUE UM")
+} else {
+for i := 1.0; i <= n1; i++ {
+soma += 1/i
+}
+fmt.Printf("Resultado: %.5f\n", soma)
+}
+}
