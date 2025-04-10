@@ -1,0 +1,35 @@
+package main
+
+import "fmt"
+
+func main (){
+	var A, B , C int
+	fmt.Println("Digite três números diferentes separados por espaço: ")
+	fmt.Scan(&A, &B, &C)
+
+	MENOR := A 
+	if B < MENOR {
+		MENOR = B
+	}
+	if C < MENOR {
+		MENOR = C
+	}
+
+	MAIOR := A 
+	if B > MAIOR {
+		MAIOR = B
+	}
+	if C > MAIOR {
+		MAIOR = C
+	}
+
+	INTER := A 
+	if (B < MAIOR && B > MENOR) {
+		INTER = B
+	}
+	if (C < MAIOR && C > MENOR) {
+		INTER = C
+	}
+
+	fmt.Println(MENOR, INTER, MAIOR)
+}
