@@ -1,0 +1,25 @@
+Algoritmo "Determinante"
+
+var
+n1, n2, n3, n4, determinante:real
+
+inicio
+//Entrada de dados
+escreva("Digite o primeiro número: ")
+leia(n1)
+
+escreva("Digite o segundo número: ")
+leia(n2)
+
+escreva("Digite o segundo número: ")
+leia(n3)
+
+escreva("Digite o terceiro número: ")
+leia(n4)
+
+//Operações
+determinante <- (n1 * n3) - (n2 * n4)
+
+//Saída de dados
+escreva("O VALOR DO DETERMINANTE E = " , determinante)
+fimalgoritmo
