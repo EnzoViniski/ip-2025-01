@@ -1,0 +1,45 @@
+package main
+
+import "fmt"
+
+func main (){
+	var valor, precoa, precob, precoc, precod, a, b, c, d int
+
+	fmt.Println("Digite o valor incial do carro.")
+	fmt.Scan(&valor)
+
+	fmt.Println("Escolha as opções abaixo (digite 1 para sim e 2 para não para cada opção):")
+	fmt.Println("a) Ar condicionado (R$ 1750,00)")
+    fmt.Println("b) Pintura metálica (R$ 800,00)")
+    fmt.Println("c) Vidro elétrico (R$ 1200,00)")
+    fmt.Println("d) Direção hidráulica (R$ 2000,00)")
+	fmt.Scan(&a, &b, &c, &d)
+
+	if a == 1 {
+		precoa = 1750
+	} else if a == 2{
+		precoa = 0
+	}
+    
+	if b == 1 {
+		precob = 800
+	} else if b == 2{
+		precob = 0
+	}
+
+	if c == 1 {
+		precoc = 1200
+	} else if c == 2{
+		precoc = 0
+	}
+
+	if d == 1 {
+		precod = 2000
+	} else if d == 2{
+		precod = 0
+	}
+
+	preco := valor + precoa + precob + precoc + precod
+
+	fmt.Println("O valor final do carro será de :", preco, "reais")
+}
