@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+func main (){
+	var idade int
+	fmt.Println("Digite sua idade:")
+	fmt.Scan(&idade)
+
+	if idade < 0 {
+		fmt.Println("Idade inválida. Digite um número maior ou igual que 0")
+		return
+	}
+ 
+	fmt.Println("Você se enquadra como:")
+	if idade <= 2 {
+		fmt.Println("Recém-nascido")
+	}
+	if idade >= 3 && idade <= 11 {
+		fmt.Println("Criança")
+	} else if idade > 11 && idade <= 19 {
+		fmt.Println("Adolescente")
+	} else if idade > 19 && idade < 56 {
+		fmt.Println("Adulto")
+	} else if idade > 55 {
+		fmt.Println("Idoso")
+	}
+}
