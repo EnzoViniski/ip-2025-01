@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main (){
+	var A, B int
+	fmt.Println("Digite dois números separados por espaço")
+	fmt.Scan(&A, &B)
+
+	div := A % B 
+
+	if div < 0 || div > 0 {
+		fmt.Println("O número", A, "não é divisível por" , B)
+	} else {
+		fmt.Println("O número", A, " é divisível por" , B)
+	}
+}
