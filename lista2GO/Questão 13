@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func main (){
+	var n1 int
+
+	fmt.Println("Digite um número com 3 algarismos:")
+	fmt.Scan(&n1)
+
+	if n1 < 100 || n1 > 999 {
+		fmt.Println("Número inválido. O número deve ter apenas três casas decimais.")
+		return
+	}
+
+	dez := (n1 / 10) % 10
+
+	fmt.Println("O algarismo das dezenas é : ", dez)
+}
