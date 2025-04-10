@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func main (){
+   var x int
+   fmt.Println("Digite o valor de x: ")
+   fmt.Scan(&x)
+   
+   if x == 2 {
+       fmt.Println("O valor de x deve ser diferente de 2")
+       return 
+   } 
+   
+   calc := 8 /(2 - x) 
+
+   fmt.Println("O resultado da função f(x) = 8 / (2-x) é: ", calc)
+}
