@@ -1,0 +1,19 @@
+package main 
+
+import (
+	"fmt"; "math"
+)
+
+func main (){
+	var n1 float64
+	fmt.Println("Digite um número:")
+    fmt.Scan(&n1)
+
+	if n1 < 0 {
+       quad := n1 * n1
+	   fmt.Println(quad)
+	} else {
+	    sqrt :=	math.Sqrt(n1)
+		fmt.Println(sqrt)
+	}
+}
