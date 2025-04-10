@@ -1,0 +1,31 @@
+package main
+
+import "fmt"
+
+func main (){
+    var ext float64
+    var matr int
+    const SalarioMin = 788
+    const HoraExtra = 10  
+    
+    fmt.Println("Digite sua matrícula:")
+    fmt.Scan(&matr)
+    
+    fmt.Println("Digite a quantiade de hora extra trabalhadas")
+    fmt.Scan(&ext)
+    
+    salExt := HoraExtra * ext
+    salBruto := 3 * SalarioMin + salExt
+    desInss := 0.88 * salBruto
+    
+    if salBruto <= 2000 && salBruto > 0 {
+        fmt.Println("Matrículos:", matr)
+        fmt.Println("Salário liquido:", desInss, "reais")
+    } else if salBruto > 2000 {
+        desImp := 0.68 * salBruto
+        fmt.Println("Matrículos:", matr)
+        fmt.Println("Salário liquido:", desImp, "reais")
+    } else {
+        fmt.Println("Salario inválido")
+    }
+}
