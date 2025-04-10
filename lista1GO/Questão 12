@@ -1,0 +1,22 @@
+Charrete
+
+package main
+import "fmt"
+import "math"
+func main() {
+var n1, multi float64
+fmt.Print("Digite o total de horas de uso: ")
+fmt.Scan(&n1)
+if n1 < 3 {
+multi = n1 * 5
+fmt.Printf("O VALOR A PAGAR E = %.2f\n", multi)
+} else {
+if math.Mod(n1, 3) > 0 {
+multi = math.Ceil(n1/3) * 10
+fmt.Printf("O VALOR A PAGAR E = %.2f\n", multi)
+} else {
+multi = (n1 / 3) * 10
+fmt.Printf("O VALOR A PAGAR E = %.2f\n", multi)
+}
+}
+}
