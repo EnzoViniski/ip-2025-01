@@ -1,0 +1,14 @@
+Hexagono
+
+package main
+import "fmt"
+import "math"
+func main() {
+var n1, n2, volume float64
+fmt.Print("Digite a altura da piramide em metros: ")
+fmt.Scan(&n1)
+fmt.Print("Digite a aresta do hexágono em metros: ")
+fmt.Scan(&n2)
+volume = ((3 * math.Pow(n2, 2) * math.Sqrt(3)) / 6 * n1
+fmt.Printf("O VOLUME DA PIRAMIDE E = %.2f METROS CÚBICOS\n", volume)
+}
