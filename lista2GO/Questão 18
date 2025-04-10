@@ -1,0 +1,31 @@
+package main
+
+import "fmt"
+
+func main(){
+	var preco, tipo float64
+
+	fmt.Println("Digite o preço normal do DVD.")
+	fmt.Scan(&preco)
+
+	fmt.Println("Escolha a categoria do DVD:")
+	fmt.Println("1-Comum")
+	fmt.Println("2-Lançamento")
+	fmt.Scan(&tipo)
+
+    switch tipo {
+	case 1:
+		final := preco * 0.6
+		fmt.Println("Os preços finais que seram pagos pela locação do DVD serão:")
+		fmt.Println("Às quartas , sextas, sábados e domingos (4,6 ,7 e 1):", preco)
+		fmt.Println("Às segundas, terças e quintas (2, 3 e 5) :", final)
+    case 2:
+		final1 := preco * 1.15
+		final := final1 * 0.6
+		fmt.Println("Os preços finais que seram pagos pela locação do DVD serão:")
+		fmt.Println("Às quartas , sextas, sábados e domingos (4,6 ,7 e 1):", final1)
+		fmt.Println("Às segundas, terças e quintas (2, 3 e 5) :", final)
+
+	default:
+	}
+}
