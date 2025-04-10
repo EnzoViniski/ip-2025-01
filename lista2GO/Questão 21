@@ -1,0 +1,83 @@
+package main
+
+import "fmt"
+
+func main (){
+   var alun, n1, n2, n3, exer float64
+   
+   fmt.Println("Digite seu número de identificação")
+   fmt.Scan(&alun)
+   
+   fmt.Println("Digite a primeira nota:")
+   fmt.Scan(&n1)
+   
+   if n1 > 10 || n1 < 0 {
+       fmt.Println("Nota inválda. Digite uma nota entre 0 e 10")
+       return
+   }
+   
+   fmt.Println("Digite a segunda nota:")
+   fmt.Scan(&n2)
+   
+   if n2 > 10 || n2 < 0 {
+       fmt.Println("Nota inválda. Digite uma nota entre 0 e 10")
+       return
+   }
+   
+   fmt.Println("Digite a terceira nota:")
+   fmt.Scan(&n3)
+   
+   if n3 > 10 || n3 < 0 {
+       fmt.Println("Nota inválda. Digite uma nota entre 0 e 10")
+       return
+   }
+   
+   fmt.Println("Digite a media dos exercicios:")
+   fmt.Scan(&exer)
+   
+   if exer > 10 || exer < 0 {
+       fmt.Println("Media inválda. Digite uma media entre 0 e 10")
+       return
+   }
+   
+   medFinal := (n1 + 2*n2 + 3*n3 + exer) / 7
+   
+   if medFinal >= 9 && medFinal <= 10 {
+       fmt.Println("Aluno:", alun)
+       fmt.Println("Notas:", n1, n2, n3)
+       fmt.Println("Média exercícios:", exer)
+       fmt.Println("Média de aproveitamento:", medFinal)
+       fmt.Println("Conceito: A")
+       fmt.Println("APROVADO")
+   } else if medFinal >= 7.5 && medFinal < 9 {
+       fmt.Println("Aluno:", alun)
+       fmt.Println("Notas:", n1, n2, n3)
+       fmt.Println("Média exercícios:", exer)
+       fmt.Println("Média de aproveitamento:", medFinal)
+       fmt.Println("Conceito: A")
+       fmt.Println("APROVADO")
+   } else if medFinal >= 6 && medFinal < 7.5 {
+       fmt.Println("Aluno:", alun)
+       fmt.Println("Notas:", n1, n2, n3)
+       fmt.Println("Média exercícios:", exer)
+       fmt.Println("Média de aproveitamento:", medFinal)
+       fmt.Println("Conceito: A")
+       fmt.Println("APROVADO")
+   } else if medFinal >= 4 && medFinal < 6 {
+       fmt.Println("Aluno:", alun)
+       fmt.Println("Notas:", n1, n2, n3)
+       fmt.Println("Média exercícios:", exer)
+       fmt.Println("Média de aproveitamento:", medFinal)
+       fmt.Println("Conceito: A")
+       fmt.Println("REPROVADO")
+   } else if medFinal < 4 {
+       fmt.Println("Aluno:", alun)
+       fmt.Println("Notas:", n1, n2, n3)
+       fmt.Println("Média exercícios:", exer)
+       fmt.Println("Média de aproveitamento:", medFinal)
+       fmt.Println("Conceito: A")
+       fmt.Println("REPROVADO")
+   }
+   
+   
+}
