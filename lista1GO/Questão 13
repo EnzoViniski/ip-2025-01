@@ -1,0 +1,24 @@
+Notas
+
+package main
+import "fmt"
+func main() {
+var n1 float64
+fmt.Print("Digite sua nota com apenas uma casa decimal: ")
+fmt.Scan(&n1)
+if n1 <= 10 && n1 >= 9 {
+fmt.Printf("NOTA = %.1f\n", n1)
+fmt.Println("CONCEITO = A")
+} else if n1 < 9 && n1 >= 7.5 {
+fmt.Printf("NOTA = %.1f\n", n1)
+fmt.Println("CONCEITO = B")
+} else if n1 < 7.5 && n1 >= 6 {
+fmt.Printf("NOTA = %.1f\n", n1)
+fmt.Println("CONCEITO = C")
+} else if n1 < 6 && n1 >= 0 {
+fmt.Printf("NOTA = %.1f\n", n1)
+fmt.Println("CONCEITO = D")
+} else {
+fmt.Println("NOTA INVALIDA")
+}
+}
