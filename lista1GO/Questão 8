@@ -1,0 +1,15 @@
+Cerveja
+
+package main
+import "fmt"
+import "math"
+func main() {
+var n1, n2, area, custo float64
+fmt.Print("Digite o raio da lata em metros: ")
+fmt.Scan(&n1)
+fmt.Print("Digite a altura da lata em metros: ")
+fmt.Scan(&n2)
+area = 2 * (math.Pi * math.Pow(n1, 2)) + 2 * math.Pi * n1 * n2
+custo = area * 100
+fmt.Printf("O VALOR DE CUSTO É = %.2f\n", custo)
+}
