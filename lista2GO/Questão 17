@@ -1,0 +1,47 @@
+package main 
+
+import "fmt"
+
+func main() {
+    var conta, tipo int
+    var consumo float64
+    
+    fmt.Println("Digite o número da sua conta:")
+    fmt.Scan(&conta)
+
+    fmt.Println("Escolha uma das opções abaixo correspondente ao seu tipo de conta:")
+    fmt.Println("1-Residencial")
+    fmt.Println("2-Comercial")
+    fmt.Println("3-Industrial")
+    fmt.Scan(&tipo)
+
+    fmt.Println("Digite o seu consumo em metros cúbicos:")
+    fmt.Scan(&consumo)
+
+    switch tipo {
+    case 1:
+        valor := 5.0 + consumo * 0.05
+        fmt.Println("Conta:", conta)
+        fmt.Println("Valor a ser pago:", valor)
+    case 2:
+        if consumo <= 80 {
+            fmt.Println("Conta:", conta)
+            fmt.Println("Valor a ser pago:", 500.0)
+        } else {
+            valor := 500.0 + (consumo - 80) * 0.25
+            fmt.Println("Conta:", conta)
+            fmt.Println("Valor a ser pago:", valor)
+        }
+    case 3:
+        if consumo <= 100 {
+            fmt.Println("Conta:", conta)
+            fmt.Println("Valor a ser pago:", 800.0)
+        } else {
+            valor := 800.0 + (consumo - 100) * 0.04
+            fmt.Println("Conta:", conta)
+            fmt.Println("Valor a ser pago:", valor)
+        }
+    default:
+        fmt.Println("Tipo inválido. Digite um entre 1 e 3.")
+    }
+}
