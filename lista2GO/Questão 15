@@ -1,0 +1,39 @@
+package main
+
+import "fmt"
+
+func main() {
+	var dia, mes, ano int
+
+	fmt.Println("Digite o dia, mês e o ano separados por espaço:")
+	fmt.Scan(&dia, &mes, &ano)
+
+	switch mes {
+	case 1:
+		fmt.Println(dia, "de janeiro de", ano)
+	case 2:
+		fmt.Println(dia, "de fevereiro de", ano)
+	case 3:
+		fmt.Println(dia, "de março de", ano)
+	case 4:
+		fmt.Println(dia, "de abril de", ano)
+	case 5:
+		fmt.Println(dia, "de maio de", ano)
+	case 6:
+		fmt.Println(dia, "de junho de", ano)
+	case 7:
+		fmt.Println(dia, "de julho de", ano)
+	case 8:
+		fmt.Println(dia, "de agosto de", ano)
+	case 9:
+		fmt.Println(dia, "de setembro de", ano)
+	case 10:
+		fmt.Println(dia, "de outubro de", ano)
+	case 11:
+		fmt.Println(dia, "de novembro de", ano)
+	case 12:
+		fmt.Println(dia, "de dezembro de", ano)
+	default:
+		fmt.Println("Mês inválido! Digite um valor entre 1 e 12.")
+	}
+}
