@@ -1,0 +1,27 @@
+package main 
+
+import (
+	"fmt"; "math"
+)
+
+func main (){
+	var A, B, C float64
+
+	fmt.Println("Digite os coeficientes A, B e C.")
+	fmt.Scan(&A, &B, &C)
+
+	delt := (B * B) - 4*A*C 
+	x1 := (-B + math.Sqrt(delt)) / 2 * A
+	x2 := (-B - math.Sqrt(delt)) / 2 * A
+
+	if x1 > 0 || x1 < 0 && x2 > 0 || x2 < 0 {
+		fmt.Println("As raízes x1 e x2 são, respectivamente: ", x1, x2)
+		fmt.Print("As raízes são distintas")
+	} else if x1 == 0 || x2 == 0  {
+		fmt.Println("As raízes x1 e x2 são, respectivamente: ", x1, x2)
+		fmt.Print("As raízes são distintas")
+	} else if B == 0 {
+		fmt.Println("As raízes x1 e x2 são, respectivamente: ", x1, x2)
+		fmt.Print("A raíz é única")
+	}
+}
