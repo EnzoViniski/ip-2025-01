@@ -1,0 +1,38 @@
+package main
+
+import "fmt"
+
+func main (){
+	var cond , valor float64
+	
+	fmt.Println("Digite o valor do produto:")
+	fmt.Scan(&valor)
+	
+	fmt.Println("Escolha a condição de pagamento:")
+	fmt.Println("1 À vista, dinheiro ou cheque, 10% de desconto")
+	fmt.Println("2 À vista, cartão de crédito, 5% de desconto")
+	fmt.Println("3 Em 2 vezes, preço normal de etiqueta sem juros")
+	fmt.Println("4 Em 3 vezes, preço normal de etiqueta + 10% de juros")
+	fmt.Scan(&cond)
+	
+	switch cond {
+	case 1:
+	   final := valor * 0.9
+	   fmt.Println("O valor a ser pago será:")
+	   fmt.Println(final, "reais")
+	case 2:
+	   final := valor * 0.95
+	   fmt.Println("O valor a ser pago será:")
+	   fmt.Println(final, "reais")
+	case 3:
+	   final := valor / 2
+	   fmt.Println("O valor a ser pago será:")
+	   fmt.Println("2 vezes de ", final, "reais")
+	case 4:
+	   final := (valor * 1.1) / 3
+	   fmt.Println("O valor a ser pago será:")
+	   fmt.Println("3 vezes de ", final, "reais")
+	default:
+	   fmt.Println("Inválido. Escolha uma opção entre 1 e 4")
+	}
+}
