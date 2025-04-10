@@ -1,0 +1,15 @@
+Delta
+
+package main
+import "fmt"
+func main() {
+var n1, n2, n3, delta float64
+fmt.Print("Digite o coeficiente A: ")
+fmt.Scan(&n1)
+fmt.Print("Digite o coeficiente B: ")
+fmt.Scan(&n2)
+fmt.Print("Digite o coeficiente C: ")
+fmt.Scan(&n3)
+delta = math.Pow(n2, 2) - 4 * n1 * n3
+fmt.Printf("O VALOR DE DELTA E = %.2f\n", delta)
+}
