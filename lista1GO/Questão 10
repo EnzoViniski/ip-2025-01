@@ -1,0 +1,17 @@
+Determinante
+
+package main
+import "fmt"
+func main() {
+var n1, n2, n3, n4, determinante float64
+fmt.Print("Digite o primeiro número: ")
+fmt.Scan(&n1)
+fmt.Print("Digite o segundo número: ")
+fmt.Scan(&n2)
+fmt.Print("Digite o terceiro número: ")
+fmt.Scan(&n3)
+fmt.Print("Digite o quarto número: ")
+fmt.Scan(&n4)
+determinante = (n1 * n3) - (n2 * n4)
+fmt.Printf("O VALOR DO DETERMINANTE E = %.2f\n", determinante)
+}
