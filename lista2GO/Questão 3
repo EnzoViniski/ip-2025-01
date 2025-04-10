@@ -1,0 +1,19 @@
+package main 
+
+import "fmt"
+
+func main (){
+   var n1, n2 int
+   fmt.Println("Digite dois números separados por espaço: ")
+   fmt.Scan(&n1, &n2)
+
+   sum := n1 + n2
+
+   if sum > 20 {
+	sum2 := sum + 8
+	fmt.Println(sum2)
+   } else {
+	sum3 := sum - 5
+	fmt.Println(sum3)
+   }
+}
