@@ -1,0 +1,23 @@
+PA
+
+package main
+import "fmt"
+func main() {
+var n1, n2, n3, soma float64
+fmt.Print("Digite o valor inicial: ")
+fmt.Scan(&n1)
+fmt.Print("Digite a razão: ")
+fmt.Scan(&n2)
+fmt.Print("Digite a quantidade de números: ")
+fmt.Scan(&n3)
+if n3 < 0 {
+fmt.Println("NÚMERO INVÁLIDO. ESCOLHA UM NÚMERO MAIOR QUE ZERO")
+} else {
+for i := 0; i < int(n3); i++ {
+fmt.Printf("%.0f ", n1)
+soma += n1
+n1 += n2
+}
+fmt.Printf("\nSoma: %.0f\n", soma)
+}
+}
