@@ -1,0 +1,15 @@
+ SistemaMétrico
+
+package main
+import "fmt"
+func main() {
+var n1, n2, temp, chuva float64
+fmt.Print("Digite a temperatura em Fahrenheit que deseja converter: ")
+fmt.Scan(&n1)
+fmt.Print("Digite a quantidade de chuva em polegadas que deseja converter: ")
+fmt.Scan(&n2)
+temp = (5 * (n1 - 32)) / 9
+chuva = n2 * 25.4
+fmt.Printf("O VALOR EM CELSIUS = %.2f\n", temp)
+fmt.Printf("A QUANTIDADE DE CHUVA E = %.2f mm\n", chuva)
+}
