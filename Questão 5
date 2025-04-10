@@ -49,3 +49,4 @@ leia(consumo)
   outrocaso
      escreva("Escolha apenas entre C, I ou R!")
   fimescolha
+fimalgoritmo
