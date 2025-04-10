@@ -1,0 +1,66 @@
+package main
+
+import "fmt"
+
+func main (){
+	var n1, n2 int
+	fmt.Println("Digite o número correspondente à região que desja viajar:")
+	fmt.Println("1-Região Norte")
+	fmt.Println("2-Região Nordeste")
+	fmt.Println("3-Região Centro-Oeste")
+	fmt.Println("4-Região Sul")
+    fmt.Scan(&n1)
+
+	if n1 < 1 || n1 > 4 {
+        fmt.Println("Destino inválido! Digite um número entre 1 e 4.")
+        return
+    }
+
+	fmt.Println("A passagem desejada será de ida e volta? (digite 1 para sim ou 2 para não)")
+	fmt.Scan(&n2)
+
+	if n2 < 1 || n2 > 2 {
+        fmt.Println("Tipo de viagem inválido! Digite 1 ou 2.")
+        return
+    }
+	
+	var preco float64
+
+	switch n1 {
+	case 1:
+		if n2 == 1 {
+			preco = 900
+		} 
+		if n2 == 2 {
+			preco = 500
+		}
+
+	case 2:
+		if n2 == 1 {
+			preco = 650
+		} 
+		if n2 == 2 {
+			preco = 350
+		}
+
+	case 3:
+		if n2 == 1 {
+			preco = 600
+		} 
+		if n2 == 2 {
+			preco = 350
+		}
+
+	case 4:
+		if n2 == 1 {
+			preco = 550
+		} 
+		if n2 == 2 {
+			preco = 300
+		}
+	}
+	
+	fmt.Println("O valor da passagem escolhida é:", preco)
+
+
+}
