@@ -1,0 +1,18 @@
+Conversão
+
+package main
+import "fmt"
+func main() {
+var n, n1 int
+var n2, conv float64
+fmt.Print("Digite a quantidade de conversões: ")
+fmt.Scan(&n)
+n1 = 1
+for n1 <= n {
+fmt.Print("Digite a temperatura em Fahrenheit que deseja converter: ")
+fmt.Scan(&n2)
+conv = (5 * (n2 - 32)) / 9
+fmt.Printf("%.2f FAHRENHEIT EQUIVALE A %.2f CELSIUS\n", n2, conv)
+n1++
+}
+}
