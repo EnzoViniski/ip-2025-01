@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main() {
+	var B, E int
+
+	fmt.Scan(&B, &E)
+
+	resultado := 1
+
+	for i := 1; i <= E; i++{
+		resultado = resultado * B
+	}
+
+	fmt.Println(resultado)
+}
