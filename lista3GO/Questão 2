@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func main() {
+	conf := 0
+	soma := 0
+	n := 0 
+	for i := 50; i <= 70 ; i++ {
+		conf = i % 2
+		if conf == 0 {
+			soma = soma + i 
+			n = n + 1
+		}
+	}
+
+	med := soma / n
+
+	fmt.Println(soma)
+	fmt.Print(med)
+}
