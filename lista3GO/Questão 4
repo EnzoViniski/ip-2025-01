@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func main() {
+	var n int
+	
+	fmt.Scan(&n)
+
+	for n > 0 {
+		teste := 1 
+        verdadeiro := 0
+		for i := 1 ; i < n ; i++ {
+			teste = i * i 
+            if teste == n {
+				fmt.Printf("%d é quadrado perfeito\n", n)
+				verdadeiro = 1
+			}
+		}
+		if verdadeiro == 0 {
+			fmt.Printf("%d não é quadrado perfeito\n", n)
+		}
+		fmt.Scan(&n)
+	}
+}
