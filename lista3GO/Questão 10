@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func main (){
+	var N int
+
+	fmt.Scan(&N)
+
+	termo1 := 1
+	vetor := make([]int, N)
+	vetor[0] = 0
+
+    fmt.Println(vetor[0])
+
+	for i := 1; i < N; i ++{
+		fmt.Println(termo1)
+		
+		vetor[i] = termo1
+		termo1 = vetor[i] + vetor[i-1]
+	}
+}
