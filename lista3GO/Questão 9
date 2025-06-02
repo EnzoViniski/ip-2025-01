@@ -1,0 +1,44 @@
+package main
+
+import "fmt"
+
+func main (){
+	var N int
+	var n1, n2 float64
+
+	totr := 0
+	tote := 0
+	tota := 0
+	tot := 0.0
+
+	fmt.Println("Digite a quantidade de alunos:")
+	fmt.Scan(&N)
+
+	for i := 0; i < N; i++{
+	    x := i + 1
+		fmt.Printf("Digite as duas notas do aluno %d:\n", x)
+		fmt.Scan(&n1, &n2)
+
+		media := ( n1 + n2 ) / 2
+		tot += media
+
+		if media <= 3 {
+			fmt.Println("Reprovado")
+			totr ++
+		} else if media > 3 && media < 7 {
+			fmt.Println("Exame")
+			tote ++
+		} else {
+			fmt.Println("Aprovado")
+			tota ++
+		}
+	}
+
+	numero := float64(N)
+	med := tot / numero 
+
+	fmt.Println("Total de alunos reprovados: ", totr)
+	fmt.Println("Total de alunos de exame: ", tote)
+	fmt.Println("Total de alunos aprovados: ", tota)
+	fmt.Println("Média da classe: ", med)
+}
