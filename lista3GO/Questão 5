@@ -30,7 +30,7 @@ func main (){
 			tot3 ++
 		}
 
-		fmt.Println("Deseja continuar?")
+		fmt.Println("Deseja continuar? (sim = 1)")
 		fmt.Scan(&continuar)
 	}
 
