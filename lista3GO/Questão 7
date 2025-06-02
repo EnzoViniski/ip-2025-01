@@ -1,0 +1,60 @@
+package main
+
+import "fmt"
+
+func main (){
+
+	numero := 0
+	soma := 0
+	quant := 0
+	med := 0
+	maior := 0
+	somap := 0
+	pares := 0
+	somai := 0
+	i := 1
+	menor := 100000000000
+
+	for i != 30000 {
+		fmt.Println("Digite um número:")
+		fmt.Scan(&numero)
+
+		teste := numero % 2
+
+		if numero > maior {
+			maior = numero
+		}
+
+		if numero < menor {
+			menor = numero
+		}
+
+		if teste == 0 {
+			pares ++
+			somap += numero
+		} else {
+			somai += numero
+		}
+
+		soma += numero
+		quant ++
+
+		if numero == 30000 {
+			i = 30000
+		}
+
+	}
+
+	por := somai / quant
+	med = somap / pares
+	media := soma / quant
+
+	fmt.Println("a soma dos números digitados: ", soma)
+	fmt.Println("a quantidade de números digitados: ", quant)
+	fmt.Println("a média dos números digitados: ", media)
+	fmt.Println("o maior número digitado: ", maior)
+	fmt.Println("o menor número digitado: ", menor)
+	fmt.Println("a média dos números pares: ", med)
+	fmt.Println("a percentagem dos números ímpares entre todos os números digitados: ", por)
+
+}
