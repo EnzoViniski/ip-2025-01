@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func main (){
+	var N int
+
+    fmt.Println("Digite um número: ")
+	fmt.Scan(&N)
+	if N >= 1 {
+	fat := 1
+	numero := N
+
+	for i := 0; i < N ; i++ {
+		fat *= numero
+		numero --
+	}
+
+	fmt.Printf("Fatorial de %d: %d", N, fat)
+	} else {
+	    fmt.Print("Número inválido")
+	}
+}
