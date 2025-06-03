@@ -1,0 +1,27 @@
+package main
+
+import "fmt"
+
+func main (){
+	var n1, n2 int
+
+	fmt.Println("Digite dois números diferentes entre si: ")
+	fmt.Scan(&n1, &n2)
+
+	x := 0
+	teste := 1
+
+	for i := n1 + 1; i < n2; i++{
+		for j := 1; j < i; j++ {
+			teste = i % j
+			if teste == 0 {
+				x++
+			}
+		}
+		if x == 1 {
+			fmt.Println(i)
+		}
+		x = 0
+	}
+
+}
