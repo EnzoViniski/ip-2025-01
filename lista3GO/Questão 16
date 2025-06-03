@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+func main (){
+	var N, a1, a2 int
+
+	fmt.Println("Digite o primeiro e segundo termo e o valor de N nessa ordem: ")
+	fmt.Scan(&a1, &a2, &N)
+
+	fmt.Print(a1, " ")
+	fmt.Print(a2, " ")
+
+    sinal := 1
+
+	for i := 2; i < N; i++{
+		x := a1
+		a1 = a2
+		a2 = x + (sinal * a2)
+		sinal *= -1
+		fmt.Print(a2, " ")
+	}
+
+}
