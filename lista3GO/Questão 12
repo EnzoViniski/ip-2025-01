@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func main (){
+	var X float64
+
+	fmt.Println("Digite o valor de X: ")
+	fmt.Scan(&X)
+
+	sinal := -1.0
+	fat := 1.0
+	S := X
+
+	for i := 1; i < 20; i++{
+	    fat *= float64(i)
+		S += sinal * X / fat
+		sinal *= -1.0
+	} 
+
+	fmt.Println("A soma final é igual a: ", S)
+
+}
