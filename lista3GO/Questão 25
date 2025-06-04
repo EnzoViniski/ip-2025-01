@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func main (){
+	S := 0
+
+	x := 1
+	y := 15
+	sinal := 1
+	for i := 0; i < 15; i++{
+		S += (sinal * x) / (y * y) 
+		x *= 2
+		y --
+		sinal *= -1
+	}
+	
+	fmt.Println("O resultado de S é : ", S)
+}
