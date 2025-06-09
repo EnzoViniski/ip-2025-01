@@ -1,0 +1,13 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	for i := 0.5; i < 20.5; {
+		V := (4 / 3) * 3.14 * i * i * i
+		fmt.Println("Volume de esfera com R=", i, " : ", V, " cm cubicos")
+		i += 0.5
+	}
+}
