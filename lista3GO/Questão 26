@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	soma := 0
+	x := 99
+	y := 1
+	z := 2
+	for i := 0; i < 19; i++ {
+		soma += x / y
+
+		x--
+		y *= z
+		z++
+
+	}
+
+	fmt.Println("O resultado é:", soma)
+}
