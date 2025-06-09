@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 func main() {
@@ -15,5 +16,7 @@ func main() {
 		x += 2.0
 	}
 
-	fmt.Print("O valor de pi é: ", S)
+	pi := math.Cbrt(32 * S)
+
+	fmt.Print("O valor de pi é: ", pi)
 }
