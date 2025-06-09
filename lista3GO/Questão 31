@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var soma uint64 = 1
+	x := uint64(1)
+
+	for i := 0; i < 64; i++ {
+		soma += x * 2
+		x = x * 2
+	}
+
+	fmt.Println("O resultado é:", soma)
+
+}
