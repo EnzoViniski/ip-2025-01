@@ -1,0 +1,30 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var x float64
+
+	fmt.Println("Digite o valor de x:")
+	fmt.Scan(&x)
+
+	cosx := 1.0
+	sinal := -1.0
+	fat := 2.0
+	elevado := x * x
+	y := 3.0
+
+	for i := 0; i < 19; i++ {
+		cosx += sinal * (elevado) / (fat)
+		for j := 0; j < 2; j++ {
+			elevado *= x
+			fat *= y
+			y++
+		}
+		sinal *= -1
+	}
+
+	fmt.Print("O resultado é: ", cosx)
+}
