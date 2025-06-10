@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+func main() {
+	var numero int
+
+	fmt.Print("Digite um número inteiro positivo: ")
+	_, err := fmt.Scan(&numero)
+
+	if err != nil || numero < 0 {
+		fmt.Println("Por favor, digite um número inteiro positivo válido.")
+		return
+	}
+
+	if numero == 0 {
+		fmt.Println("O número 0 em binário é: 0")
+		return
+	}
+
+	var binario string
+	for n := numero; n > 0; n /= 16 {
+		resto := n % 16
+		binario = fmt.Sprintf("%d%s", resto, binario)
+	}
+
+	fmt.Printf("O número %d em binário é: %s\n", numero, binario)
+}
