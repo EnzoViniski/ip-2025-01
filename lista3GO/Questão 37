@@ -1,0 +1,28 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func main() {
+	var entrada string
+
+	fmt.Print("Digite um número em octal (base 8): ")
+	_, err := fmt.Scan(&entrada)
+
+	for _, c := range entrada {
+		if c < '0' || c > '7' {
+			fmt.Println("Entrada inválida. Digite apenas dígitos octais (0-7).")
+			return
+		}
+	}
+
+	numero, err := strconv.ParseInt(entrada, 8, 64)
+	if err != nil {
+		fmt.Println("Erro na conversão:", err)
+		return
+	}
+
+	fmt.Printf("O número octal %s em decimal é: %d\n", entrada, numero)
+}
