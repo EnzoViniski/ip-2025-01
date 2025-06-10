@@ -15,16 +15,17 @@ func main() {
 		montante := i * (130 + x)
 		q := 130.0 + x
 		x += 30
-		fmt.Println(q, "                       ", i, "       ", montante)
+		fmt.Printf("          %.0f              %.1f     %.0f\n", q, i, montante)
 		if montante > maior {
 			maior = montante
 			maiorq = q
 			maiori = i
 		}
 	}
+	fmt.Printf("          380              1.0     380\n")
 
-	fmt.Println("Lucro maximo :", maior)
+	fmt.Printf("Lucro maximo : %.0f\n", maior)
 	fmt.Println("Quantidade de ingressos :", maiorq)
-	fmt.Println("Preço por ingresso :", maiori)
+	fmt.Printf("Preço por ingresso : %.1f\n", maiori)
 
 }
