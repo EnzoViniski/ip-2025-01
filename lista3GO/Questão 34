@@ -1,0 +1,26 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var N1, N2 int
+
+	fmt.Println("Digite os valores de N1 e N2: ")
+	fmt.Scan(&N1, &N2)
+
+	x := 2
+	for i := 0; i != 1; {
+		teste := x * N1
+		teste2 := teste % N2
+
+		if teste2 == 0 {
+			fmt.Println("O MMC é : ", teste)
+			i = 1
+		} else {
+			x++
+		}
+	}
+
+}
