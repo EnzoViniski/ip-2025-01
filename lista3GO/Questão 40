@@ -1,0 +1,30 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	x := 0.0
+	maior := 0.0
+	maiorq := 0.0
+	maiori := 0.0
+	fmt.Println("Quantidade de ingressos    Preço   Lucro")
+	for i := 6.0; i > 1.0; i -= 0.6 {
+		montante := i * (130 + x)
+		q := 130.0 + x
+		x += 30
+		fmt.Println(q, "                       ", i, "       ", montante)
+		if montante > maior {
+			maior = montante
+			maiorq = q
+			maiori = i
+		}
+	}
+
+	fmt.Println("Lucro maximo :", maior)
+	fmt.Println("Quantidade de ingressos :", maiorq)
+	fmt.Println("Preço por ingresso :", maiori)
+
+}
